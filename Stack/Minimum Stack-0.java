@@ -94,7 +94,7 @@ public class Main{
             if(inp.equals("display")){
                 ns.display();
             } else if(inp.contains("push")){
-                int val = Integer.parseInt(inp.replaceAll("[A-Za-z\\s]", ""));
+                int val = Integer.parseInt(inp.replaceAll("[A-Za-z\\]", ""));
                 ns.push(val);
             } else if(inp.equals("top")){
                 System.out.println(ns.top());
