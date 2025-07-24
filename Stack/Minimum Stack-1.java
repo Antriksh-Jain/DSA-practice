@@ -67,7 +67,7 @@ public class Main{
             
             
             if(inp.contains("push")){
-                int val = Integer.parseInt(inp.replaceAll("[\\D]", ""));
+                int val = Integer.parseInt(inp.replaceAll("[A-Za-z\\s]", ""));
                 ns.push(val);
             } else if(inp.equals("top")){
                 System.out.println(ns.top());
