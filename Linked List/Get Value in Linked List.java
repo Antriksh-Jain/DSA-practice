@@ -75,7 +75,7 @@ public class Main{
                 return -1;
             } else if(idx>=size() || idx<0){
                 System.out.println("Invalid Argument");
-                return -1
+                return -1;
             } else {
                 Node rv = head;
                 for(int i = 0; i<idx; i++){
