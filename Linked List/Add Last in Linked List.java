@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main{
     public static class Node{
         int data;
@@ -22,5 +24,32 @@ public class Main{
             }
             size++;
         }
+    }
+    
+    public static void testList(LinkedList list){
+        for(Node temp = list.head; temp!=null; temp=temp.next){
+            System.out.println(temp.data);
+        }
+        System.out.println(list.size);
+        
+        if(list.size>0){
+            System.out.println(list.tail.data);
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        LinkedList list = new LinkedList();
+        
+        String str = scn.nextLine();
+        while(str.equals("exit") == false){
+            if(str.startsWith("addLast")){
+                int val = Integer.parseInt(str.split(" ")[1]);
+                list.addLast(val);
+            }
+            str = scn.nextLine();
+        }
+        
+        testList(list);
     }
 }
