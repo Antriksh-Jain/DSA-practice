@@ -19,7 +19,8 @@ public class Main{
             if(size()==data.length){
                 System.out.println("Queue Overflow");
             } else {
-                data[size] = val;
+                int rear = (front + size)%data.length;
+                data[rear] = val;
                 size++;
             }
         }
@@ -30,11 +31,8 @@ public class Main{
                 return -1;
             } else {
                 int v = data[front];
-                front++;
+                front = (front+1)%data.length;
                 size--;
-                if(front>=data.length){
-                    front = 0;
-                }
                 return v;
             }
         }
@@ -53,17 +51,14 @@ public class Main{
         }
         
         void display(){
-            int v = front;
             for(int i = 0; i<size(); i++){
-                if(v<data.length){
-                    System.out.print(data[v] + " ");
-                } else {
-                    v=0;
-                    System.out.print(data[v] + " ");
-                }
-                v++;
+                int v = (front+i)%data.length;
+                System.out.print(data[v] + " ");
             }
             System.out.println();
+        }
+        int front(){
+            return front;
         }
     }
     
@@ -87,6 +82,8 @@ public class Main{
                 System.out.println(q.size());
             } else if(str.equals("display")){
                 q.display();
+            } else if(str.equals("front")){
+                System.out.println(q.front());
             }
             
             str = scn.nextLine();
