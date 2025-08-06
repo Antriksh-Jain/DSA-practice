@@ -58,7 +58,7 @@ public class Main{
     public static int max(Node node){
         int max = Integer.MIN_VALUE;
         for(Node child: node.children){
-            int cm = child.data;
+            int cm = max(child);
             max = Math.max(max, cm);
         }
         
