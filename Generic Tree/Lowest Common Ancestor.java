@@ -227,7 +227,7 @@ public class Main{
         return nr;
     }
     
-    public static int leastCommonAncestor(Node node, int d1, int d2){
+    public static int lowestCommonAncestor(Node node, int d1, int d2){
         ArrayList<Integer> p1 = nodeToRoot(node, d1);
         ArrayList<Integer> p2 = nodeToRoot(node, d2);
         
@@ -259,7 +259,7 @@ public class Main{
         int d2 = scn.nextInt();
         
         Node root = construct(arr);
-        System.out.println("Least Common Ancestor: " + leastCommonAncestor(root, d1, d2));
+        System.out.println("Lowest Common Ancestor: " + lowestCommonAncestor(root, d1, d2));
         display(root);
     }
 }
