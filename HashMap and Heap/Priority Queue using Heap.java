@@ -17,6 +17,7 @@ public class Main{
             int pi = (i - 1 ) / 2;
             if(data.get(i) < data.get(pi)){
                 swap(i, pi);
+                upheafiy(pi);
             }
         }
         
