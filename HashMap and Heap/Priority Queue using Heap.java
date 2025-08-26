@@ -14,6 +14,10 @@ public class Main{
         }
         
         private void upheafiy(int i){
+            if(i == 0){
+                return;
+            }
+            
             int pi = (i - 1 ) / 2;
             if(data.get(i) < data.get(pi)){
                 swap(i, pi);
@@ -44,13 +48,11 @@ public class Main{
             int mini = pi;
             int li = pi * 2 + 1;
             if(li < data.size() && data.get(mini) > data.get(li)){
-                swap(pi, li);
                 mini = li;
             }
             
             int ri = pi * 2 + 2;
             if(ri < data.size() && data.get(mini) > data.get(ri)){
-                swap(pi, ri);
                 mini = ri;
             }
             
