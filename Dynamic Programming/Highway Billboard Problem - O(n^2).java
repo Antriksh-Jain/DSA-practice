@@ -25,13 +25,13 @@ public class Main{
         int ans = 0;
         
         for(int i = 1; i < dp.length; i++){
-            int max = Integer.MIN_VALUE;
+            int max = 0;
             
             for(int j = 0; j < i; j++){
                 int dist = x[i] - x[j];
                 
                 if(dist > t){
-                    max = Math.max(max, rev[j]);
+                    max = Math.max(max, dp[j]);
                 }
             }
             
