@@ -18,6 +18,7 @@ public class Main{
         
         int edge = scn.nextInt();
         int vtces = scn.nextInt();
+        @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[vtces];
         for(int i = 0; i < vtces; i++){
             graph[i] = new ArrayList<>();
