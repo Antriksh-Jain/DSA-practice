@@ -30,8 +30,8 @@ public class Main{
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         
-        int edge = scn.nextInt();
         int vtces = scn.nextInt();
+        int edge = scn.nextInt();
         @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph = new ArrayList[vtces];
         for(int i = 0; i < vtces; i++){
@@ -39,7 +39,7 @@ public class Main{
         }
         
         scn.nextLine();
-        for(int i = 0; i < vtces; i++){
+        for(int i = 0; i < edge; i++){
             String str = scn.nextLine();
             int v1 = Integer.parseInt(str.split(" ")[0]);
             int v2 = Integer.parseInt(str.split(" ")[1]);
